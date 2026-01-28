@@ -1,0 +1,72 @@
+[
+  {
+    "sku": "SOL-PLT-420",
+    "name": "420W Mono Solar Panel",
+    "category": "Solar Panel",
+    "specs": "420W, monocrystalline, 21% efficiency",
+    "price": 210
+  },
+  {
+    "sku": "INV-5K-HYB",
+    "name": "5kW Hybrid Inverter",
+    "category": "Inverter",
+    "specs": "5kW, hybrid, 48V battery compatible",
+    "price": 980
+  },
+  {
+    "sku": "BAT-LFP-10K",
+    "name": "10kWh LiFePO4 Battery",
+    "category": "Battery",
+    "specs": "10kWh, 51.2V, 200Ah",
+    "price": 2200
+  },
+  {
+    "sku": "CTRL-MPPT-60",
+    "name": "60A MPPT Charge Controller",
+    "category": "Controller",
+    "specs": "60A, 150V input, MPPT",
+    "price": 320
+  },
+  {
+    "sku": "CAB-6AWG-20",
+    "name": "6 AWG Copper Cable 20m",
+    "category": "Cable",
+    "specs": "6 AWG, copper, 20m roll",
+    "price": 95
+  },
+  {
+    "sku": "MC4-PAIR",
+    "name": "MC4 Connector Pair",
+    "category": "Connector",
+    "specs": "IP67, 1000V",
+    "price": 12
+  },
+  {
+    "sku": "MOUNT-ROOF",
+    "name": "Roof Mounting Kit",
+    "category": "Mounting",
+    "specs": "Aluminum rails and clamps",
+    "price": 260
+  },
+  {
+    "sku": "BREAK-DC",
+    "name": "DC Breaker 125A",
+    "category": "Protection",
+    "specs": "125A, DC rated",
+    "price": 40
+  },
+  {
+    "sku": "UPS-3K",
+    "name": "3kW Backup UPS",
+    "category": "Backup",
+    "specs": "3kW, pure sine wave",
+    "price": 540
+  },
+  {
+    "sku": "MONITOR-GW",
+    "name": "Energy Monitor Gateway",
+    "category": "Monitoring",
+    "specs": "Wi-Fi, app monitoring",
+    "price": 120
+  }
+]
