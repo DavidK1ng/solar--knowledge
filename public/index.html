@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Voice Trainer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Solar Voice Trainer</h1>
+      <p>Voice-first sales simulation with real-time transcripts.</p>
+    </div>
+    <div class="status-card" id="overallStatus">
+      <h3>Overall Score</h3>
+      <p class="score" id="overallScore">--</p>
+      <p class="delta" id="recentDelta">Recent improvement: --</p>
+    </div>
+  </header>
+
+  <main class="app-grid">
+    <section class="panel">
+      <h2>Scenario Setup</h2>
+      <div class="field">
+        <label for="productFile">Upload products JSON</label>
+        <input type="file" id="productFile" accept="application/json" />
+        <button class="secondary" id="loadSample">Load sample data</button>
+      </div>
+      <div class="field">
+        <label for="scenarioType">Simulation type</label>
+        <select id="scenarioType">
+          <option value="simple">Simple task (in-store purchase)</option>
+          <option value="installation">Full installation / technical inquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Language</label>
+        <div class="badge">English (default)</div>
+      </div>
+      <button id="startSession">Start new session</button>
+      <div class="divider"></div>
+      <div id="scenarioDetails" class="scenario-details hidden">
+        <h3>Scenario</h3>
+        <p id="scenarioText"></p>
+        <h4>Customer Goal</h4>
+        <p id="scenarioGoal"></p>
+        <h4>Ideal Resolution</h4>
+        <p id="scenarioIdeal"></p>
+      </div>
+    </section>
+
+    <section class="panel conversation">
+      <div class="conversation-header">
+        <div>
+          <h2>Live Conversation</h2>
+          <p class="subtle">Use the microphone or type to respond. All transcript is shown below.</p>
+        </div>
+        <button class="danger" id="endSession" disabled>End & Evaluate</button>
+      </div>
+
+      <div class="chat-window" id="chatWindow"></div>
+
+      <div class="controls">
+        <button id="micButton" class="mic" disabled>
+          <span id="micLabel">Start recording</span>
+        </button>
+        <input type="text" id="textInput" placeholder="Type a reply (fallback)" disabled />
+        <button id="sendButton" disabled>Send</button>
+      </div>
+      <p class="hint" id="recordHint">Microphone uses your browser recording permission.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Evaluation</h2>
+      <div id="evaluationCard" class="evaluation hidden">
+        <div class="score-row">
+          <span>Final Score</span>
+          <span class="score" id="finalScore">--</span>
+        </div>
+        <p id="evaluationSummary"></p>
+        <h4>Suggestions</h4>
+        <p id="evaluationSuggestions"></p>
+        <div class="pill-group" id="strengthsRisks"></div>
+      </div>
+      <div class="placeholder" id="evaluationPlaceholder">
+        Complete a session to see coaching feedback.
+      </div>
+    </section>
+
+    <section class="panel history">
+      <h2>Past Sessions</h2>
+      <div id="historyList" class="history-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
